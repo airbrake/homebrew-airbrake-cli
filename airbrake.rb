@@ -11,11 +11,15 @@ class Airbrake < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/airbrake/airbrake-cli/releases/download/v0.1.0/airbrake_0.1.0_mac-os_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "5cc2b05e888a7e84ff2b7d1535648c2a8e43ae78fdadaba7d08ad21ca5233b95"
+    sha256 "4137c518b6c5ce41b1fd18bba55c4cbb007f9f494312f1ae0c0a0d3a5af3f798"
   end
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/airbrake/airbrake-cli/releases/download/v0.1.0/airbrake_0.1.0_mac-os_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "7e66dc2df520dc41b974cd52d6faf83e2ae1b72507a46874a1adb9bfe5efa6a4"
+    sha256 "ecbb783b3d5c5918e5557bfdb1ab595d3dfa8d71b5f7e8f982049ce3c833e582"
+  end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/airbrake/airbrake-cli/releases/download/v0.1.0/airbrake_0.1.0_linux_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "7352db143a584b09a7d8d5e546fa45890ed58d88352a008f9d1185af70865c68"
   end
 
   def install
