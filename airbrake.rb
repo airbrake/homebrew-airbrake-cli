@@ -6,20 +6,20 @@ require_relative "lib/custom_download_strategy"
 class Airbrake < Formula
   desc "Airbrake CLI"
   homepage "https://airbrake.io"
-  version "0.5.0"
+  version "0.6.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/airbrake/airbrake-cli/releases/download/v0.5.0/airbrake_0.5.0_mac-os_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "b4b5a23591316385e9bdb814126d6220567aae0ad55eb2814db4650b2e659a1c"
+    url "https://github.com/airbrake/airbrake-cli/releases/download/v0.6.0/airbrake_0.6.0_mac-os_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "0a85eb2ac38d8d696c5c617037ece331e7c5afd4eb25f3756963566137f13efe"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/airbrake/airbrake-cli/releases/download/v0.5.0/airbrake_0.5.0_mac-os_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "58e060e8d433681267c09c23f1ede6b398d3ee5c962ce5be79d7fdf7dedad95d"
+    url "https://github.com/airbrake/airbrake-cli/releases/download/v0.6.0/airbrake_0.6.0_mac-os_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "d56386f3aa520cf57c73721677943e382103e065ffea31ebfb5431d75cce1528"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/airbrake/airbrake-cli/releases/download/v0.5.0/airbrake_0.5.0_linux_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "32374819fe403323cea5b7738fb1d0ceeec965d79616886dee67ba0b5e2f6a12"
+    url "https://github.com/airbrake/airbrake-cli/releases/download/v0.6.0/airbrake_0.6.0_linux_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "92e6756a6bcf768f8d3297e4c11c1d469538753c452c0f9bc02105b846328504"
   end
 
   def install
