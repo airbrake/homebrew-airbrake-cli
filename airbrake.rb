@@ -5,20 +5,20 @@
 class Airbrake < Formula
   desc "Airbrake CLI"
   homepage "https://airbrake.io"
-  version "1.0.0"
+  version "1.0.1"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/airbrake/airbrake-cli/releases/download/v1.0.0/airbrake_1.0.0_mac-os_x86_64.tar.gz"
-    sha256 "3e255cbf25808e2eaa20fc435680954e1b5acfb5f8b77418ec9e35e550ea46a7"
+    url "https://github.com/airbrake/airbrake-cli/releases/download/v1.0.1/airbrake_1.0.1_mac-os_x86_64.tar.gz"
+    sha256 "d761ec0c71a9fc3919f92f0bdc61665fc5939d6fea62839b7a3024c4c85ddf3b"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/airbrake/airbrake-cli/releases/download/v1.0.0/airbrake_1.0.0_mac-os_arm64.tar.gz"
-    sha256 "e20b7b7e3b30cfc0648af4e1a62691d39289dda7c4621c4b047ee0a90a127a21"
+    url "https://github.com/airbrake/airbrake-cli/releases/download/v1.0.1/airbrake_1.0.1_mac-os_arm64.tar.gz"
+    sha256 "742b21b7265ac2094caa01279ef5c92366dafac95ce209723347cd06ac979e94"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/airbrake/airbrake-cli/releases/download/v1.0.0/airbrake_1.0.0_linux_x86_64.tar.gz"
-    sha256 "7c608d42395a0caace2770f811fc4c406811c81dcc363c0a66bf3d2d8d68eb71"
+    url "https://github.com/airbrake/airbrake-cli/releases/download/v1.0.1/airbrake_1.0.1_linux_x86_64.tar.gz"
+    sha256 "181228302a87b9534ff33da0b386c0977413926683776cb5106391106db26760"
   end
 
   def install
