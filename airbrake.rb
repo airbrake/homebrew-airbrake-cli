@@ -5,28 +5,35 @@
 class Airbrake < Formula
   desc "Airbrake CLI"
   homepage "https://airbrake.io"
-  version "1.1.0"
-  bottle :unneeded
+  version "1.2.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/airbrake/airbrake-cli/releases/download/v1.1.0/airbrake_1.1.0_mac-os_x86_64.tar.gz"
-      sha256 "ec1644e5280e57914bf6b338316dd259e2b6ac6db85d374672426626dc149dc9"
+      url "https://github.com/airbrake/airbrake-cli/releases/download/v1.2.2/airbrake_1.2.2_mac-os_x86_64.tar.gz"
+      sha256 "c93733bef224b635aea5f98db94083cc13f6339bd54f5e17f0a5086776ff013e"
+
+      def install
+        bin.install "airbrake"
+      end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/airbrake/airbrake-cli/releases/download/v1.1.0/airbrake_1.1.0_mac-os_arm64.tar.gz"
-      sha256 "5a49a1e1d2914284f320b2bc1ce078bd6cc7fe2f5b3ec38ea78a68554f12a117"
+      url "https://github.com/airbrake/airbrake-cli/releases/download/v1.2.2/airbrake_1.2.2_mac-os_arm64.tar.gz"
+      sha256 "3f8e2628ddd20095023bd8c291328036611e140720d8941eecab20ddcd464e9a"
+
+      def install
+        bin.install "airbrake"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/airbrake/airbrake-cli/releases/download/v1.1.0/airbrake_1.1.0_linux_x86_64.tar.gz"
-      sha256 "389c8d543202e1dda5ba724176ab5bb0f5435b13c59ce48c5a689dafdb1d1b35"
-    end
-  end
+      url "https://github.com/airbrake/airbrake-cli/releases/download/v1.2.2/airbrake_1.2.2_linux_x86_64.tar.gz"
+      sha256 "d7b06c22ee761569a9d4449a6448b890d809e55f1d2e7157dd4bf10d9dc7eb5c"
 
-  def install
-    bin.install "airbrake"
+      def install
+        bin.install "airbrake"
+      end
+    end
   end
 end
