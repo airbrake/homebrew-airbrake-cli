@@ -5,20 +5,20 @@
 class Airbrake < Formula
   desc "Airbrake CLI"
   homepage "https://airbrake.io"
-  version "1.2.8"
+  version "1.2.9"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/airbrake/airbrake-cli/releases/download/v1.2.8/airbrake_1.2.8_mac-os_x86_64.tar.gz"
-      sha256 "123daee4a57b991a1e97fee6f44d749dd0ba1152351cc61b219f12cabd1b7f95"
+    if Hardware::CPU.arm?
+      url "https://github.com/airbrake/airbrake-cli/releases/download/v1.2.9/airbrake_1.2.9_mac-os_arm64.tar.gz"
+      sha256 "df0226710b0a3392c8300ec9a3cf8bf3335bf78368bc31bf11f05935f9ce363f"
 
       def install
         bin.install "airbrake"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/airbrake/airbrake-cli/releases/download/v1.2.8/airbrake_1.2.8_mac-os_arm64.tar.gz"
-      sha256 "9cb1cf4e6645e1330c9f0e4e85aca789336cf68322b04b3a31a603f22a7a8836"
+    if Hardware::CPU.intel?
+      url "https://github.com/airbrake/airbrake-cli/releases/download/v1.2.9/airbrake_1.2.9_mac-os_x86_64.tar.gz"
+      sha256 "bd6ecd6d31c2a4a11efd559a4f78d93461ebffa16c10f188d46224cf8dc524fa"
 
       def install
         bin.install "airbrake"
@@ -28,8 +28,8 @@ class Airbrake < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/airbrake/airbrake-cli/releases/download/v1.2.8/airbrake_1.2.8_linux_x86_64.tar.gz"
-      sha256 "d0ff895ac8211fe94d9424fd8360e66986b93c0657a8617f239fa9b65218cc24"
+      url "https://github.com/airbrake/airbrake-cli/releases/download/v1.2.9/airbrake_1.2.9_linux_x86_64.tar.gz"
+      sha256 "4e8466b2f382f9ac137622badd0d223bfbbc71da40ad1111de2da50393ce5dff"
 
       def install
         bin.install "airbrake"
